@@ -10,8 +10,8 @@ class AdditionService : Service() {
     override fun onBind(intent: Intent?): IBinder? {
         Log.e("server", "Binding Service")
         return object : IAddition.Stub() {
-            override fun performAddition(numOne: Int, numTwo: Int): Int {
-                return numOne + numTwo
+            override fun performAddition(numOne: Int, numTwo: Int): Result {
+                return Result(numOne, numTwo, numOne + numTwo)
             }
         }
     }

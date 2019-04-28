@@ -1,8 +1,9 @@
 // IAddition.aidl
 package com.zuhaibahmad.aidldemo;
 
+import com.zuhaibahmad.aidldemo.Result;
 // Declare any non-default types here with import statements
 
 interface IAddition {
-    int performAddition(int numOne, int numTwo);
+    Result performAddition(int numOne, int numTwo);
 }

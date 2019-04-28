@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity(), ServiceConnection {
 
         tvResult.text = if (isBound) {
             val result = iRemoteService?.performAddition(numOne, numTwo)
-            "$numOne + $numTwo = $result"
+            //"$numOne + $numTwo = $result"
+            result.toString()
         } else {
             "Service not bound!"
         }
